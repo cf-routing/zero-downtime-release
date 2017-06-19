@@ -1,0 +1,32 @@
+#!/bin/bash -e
+
+RUN_DIR=/var/vcap/sys/run/drroute
+LOG_DIR=/var/vcap/sys/log/drroute
+PIDFILE=${RUN_DIR}/drroute.pid
+
+source /var/vcap/packages/drroute/src/drroute/pid_utils.sh
+
+case $1 in
+
+  start)
+    pid_guard $PIDFILE "drroute"
+
+    mkdir -p $RUN_DIR
+    chown -R vcap:vcap $RUN_DIR
+    mkdir -p $LOG_DIR
+    chown -R vcap:vcap $LOG_DIR
+
+    PORT=8080 /var/vcap/packages/drroute/bin/drroute
+    ;;
+
+  stop)
+    kill_and_wait $PIDFILE
+
+    ;;
+
+  *)
+    echo "Usage: drroute {start|stop}"
+
+    ;;
+
+esac

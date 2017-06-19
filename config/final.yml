@@ -1,0 +1,6 @@
+---
+final_name: zero-downtime
+blobstore:
+  provider: s3
+  options:
+    bucket_name: routing-release-blobs

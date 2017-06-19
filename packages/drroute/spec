@@ -1,0 +1,6 @@
+---
+name: drroute
+dependencies:
+- golang1.7
+files:
+  - drroute/**/**

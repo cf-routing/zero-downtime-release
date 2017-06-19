@@ -1,0 +1,16 @@
+---
+name: drroute
+
+description: ""
+
+templates:
+  drroute_ctl: bin/drroute_ctl
+
+packages:
+  - drroute
+
+properties:
+  static_backend.port:
+    description: "Port for running the app"
+    default: 8080
+

@@ -1,0 +1,6 @@
+check process drroute
+  with pidfile /var/vcap/sys/run/drroute/drroute.pid
+  start program "/var/vcap/jobs/drroute/bin/drroute_ctl start"
+    with timeout 60 seconds
+  stop program "/var/vcap/jobs/drroute/bin/drroute_ctl stop"
+  group vcap
