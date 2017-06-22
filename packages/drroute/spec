@@ -1,6 +1,6 @@
 ---
 name: drroute
 dependencies:
-- golang1.7
+- golang1.8
 files:
   - drroute/**/**
