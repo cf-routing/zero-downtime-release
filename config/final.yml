@@ -1,6 +1,6 @@
 ---
 final_name: zero-downtime
 blobstore:
-  provider: s3
+  provider: gcs
   options:
     bucket_name: routing-release-blobs
