@@ -1,6 +1,6 @@
 ---
 name: drroute
 dependencies:
-- golang1.8
+- golang-1-linux
 files:
   - drroute/**/**
