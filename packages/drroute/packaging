@@ -8,4 +8,6 @@ cp -a ./* ${BOSH_INSTALL_TARGET}/src
 
 export GOPATH=${BOSH_INSTALL_TARGET}
 
-go install drroute@latest
+cd ${BOSH_INSTALL_TARGET}/src/drroute
+go install
+
